@@ -1,0 +1,9 @@
+@import '../../home.component.scss';
+
+.pennapps_title {
+    border: 1px blue;
+    background: white;
+    margin: $pennapps-global__gutter 0px;
+    display: flex;
+    justify-content: center;
+}

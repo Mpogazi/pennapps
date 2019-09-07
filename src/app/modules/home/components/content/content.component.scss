@@ -1,0 +1,8 @@
+@import '../../home.component.scss';
+
+.pennapps_content {
+    min-height: 600px;
+    border: 1px red;
+    background: blue;
+    margin: $pennapps-global__gutter 0px;
+}

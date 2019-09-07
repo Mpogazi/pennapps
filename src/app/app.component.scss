@@ -1,3 +1,15 @@
-.title {
-    text-align: center;
+
+$pennapps-background: #ffffff;
+$pennapps-font: 14px;
+$pennapps-global__gutter: 16px;
+
+:host {
+    background: #eeeeee;
+}
+
+.pennapps_rail {
+    padding: $pennapps-global__gutter 8%; 
+    display: block;
+    margin: 0;
+    min-height: 200px;
 }
