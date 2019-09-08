@@ -1,8 +1,10 @@
 @import '../../home.component.scss';
 
 .pennapps_content {
-    min-height: 600px;
-    border: 1px red;
-    background: blue;
-    margin: $pennapps-global__gutter 0px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: $pennapps-global__gutter / 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

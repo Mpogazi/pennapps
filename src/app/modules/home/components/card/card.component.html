@@ -1,0 +1,14 @@
+<div class="pennapps_card">
+    <h2 [innerHTML]="company.name"></h2>
+    <p [innerHTML]="company.description"></p>
+    <p [innerHTML]="company.valuation"></p>
+    <div class="pennapps_related_companies">
+        <h3>Related Companies: </h3>
+        <ul>
+            <li *ngFor="let item of company.relatedCompanies">
+                <span [innerHTML]="item.name"></span>
+                <span [innerHTML]="item.value"></span>
+            </li>
+        </ul>
+    </div>
+</div>

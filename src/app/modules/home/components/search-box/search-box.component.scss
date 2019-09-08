@@ -4,12 +4,11 @@
     border: 1px red;
     margin: $pennapps-global__gutter 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 input { 
     height: 32px;
-    width: 80%;
     border-radius: 2px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     outline: none;

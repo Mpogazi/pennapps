@@ -1,0 +1,14 @@
+@import '../../home.component.scss';
+
+:host {
+    margin: $pennapps-global__gutter / 2;
+    background: #eeeeee;
+}
+
+.pennapps_card {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+    padding: $pennapps-global__gutter / 2;
+    flex-grow: 1;
+}
+

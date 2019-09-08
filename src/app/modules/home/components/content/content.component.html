@@ -1,5 +1,7 @@
 <div class="pennapps_content">
-    <h1>
-        content goes here
-    </h1>
+    <div *ngFor="let item of companies">
+        <card-component
+            [company]="item">
+        </card-component>
+    </div>
 </div>

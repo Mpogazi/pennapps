@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
 import { SAMPLE_STOCKS } from '../../mocks/search-box.mock';
-import { Overlay } from '@angular/cdk/overlay';
 
 
 @Component({
@@ -15,6 +14,8 @@ import { Overlay } from '@angular/cdk/overlay';
 export class SearchBoxComponent {
     public searchControl: FormControl;
     public filteredResults$: Observable<string[]>;
+    @Output()
+    searchEvent: EventEmitter<string> = new EventEmitter<string>();
 
     // An array of strings from the server
     public stocks = SAMPLE_STOCKS;
@@ -30,8 +31,16 @@ export class SearchBoxComponent {
     }
 
     private filterNames(val: string): string[] {
-        return val ? 
-            this.stocks.filter(x => x.toLowerCase().indexOf(val.toLowerCase()) === 0) : 
+        return val ?
+            this.stocks.filter(x => x.toLowerCase().indexOf(val.toLowerCase()) === 0) :
             [];
+    }
+
+    private fireSearch(): void {
+        const term = this.searchControl.value;
+        this.searchControl.setValue('');
+        if (!!term) {
+            this.searchEvent.emit(term);
+        }
     }
 }

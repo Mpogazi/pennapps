@@ -1,18 +1,26 @@
 <div class="pennapps_search">
-    <input 
-        type="search" 
-        class="mat-elevation-z2"
-        [matAutocomplete]="auto"
-        [formControl]="searchControl">
-    <mat-autocomplete 
-        #auto="matAutocomplete"
-        class="mat-elevation-z2">
-        <mat-option
-            *ngFor="let item of filteredResults$ | async"
-            [value]="item">
-            <span
-                [innerHTML]="item">
-            </span>
-        </mat-option>
-    </mat-autocomplete>
+    <div class="search_box">
+        <input 
+            type="search" 
+            class="mat-elevation-z2"
+            placeholder="search" 
+            [matAutocomplete]="auto" 
+            [formControl]="searchControl">
+        <mat-autocomplete 
+            #auto="matAutocomplete" 
+            class="mat-elevation-z2">
+            <mat-option 
+                *ngFor="let item of filteredResults$ | async" 
+                [value]="item">
+                <span 
+                    [innerHTML]="item">
+                </span>
+            </mat-option>
+        </mat-autocomplete>
+    </div>
+    <button
+        class="search_button" 
+        (click)="fireSearch()">
+        Search
+    </button>
 </div>
